@@ -1,0 +1,14 @@
+doctype 5
+html(lang="en")
+  head
+    link(rel='stylesheet', type='text/css', href='css/main.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    script(type='text/javascript')
+      var require = {baseUrl:'src', waitSeconds:120};
+    script(type='text/javascript', src='lib/jquery/require-jquery.js')
+    script(type='text/javascript')
+      require(['main'], function() {
+      });
+    title Aaron Morais
+  body
+    //block mainContent 

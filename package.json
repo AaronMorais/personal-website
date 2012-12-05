@@ -1,0 +1,19 @@
+{
+  "name": "AaronMorais",
+  "subdomain": "aaronmorais.personalWebsite",
+  "domains": [
+    "aaronmorais.com",
+    "www.aaronmorais.com"
+  ],
+  "scripts": {
+    "start": "server.js"
+  },
+  "version": "0.0.0-14",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "dependencies": {
+    "jade": "0.27.x",
+    "express": "3.0.x"
+  }
+}
