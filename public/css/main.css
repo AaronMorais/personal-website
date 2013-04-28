@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:200,400);
+body {
+    background:url("/img/bright_squares.png") repeat;
+    font-family: 'Lato', serif;
+}
+
+.container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: rgba(0, 0, 0,0.2);
+}
+
+.left-container {
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.name-container {
+    margin: 0 auto;
+    padding-top: 20%;
+    padding-bottom: 7.5%;
+}
+
+.name {
+    font-size:1.6em;
+    line-height: 1.2em;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+    .name {
+        font-size:120%
+    }
+}
+
+#first-name {
+    margin-left: -20%;
+}
+
+#last-name {
+    margin-left: -5%;
+}
+
+.navBar {
+    padding-top: 10%;
+    padding-bottom: 35%;
+}    
+.element {
+    margin-bottom:2.5%;
+    font-size:100%;
+    text-align:left;
+    margin-left: 10%;
+    color: rgb(74,66,71);
+}
+a {
+    text-decoration:none;
+    color: rgb(74,66,71);
+}
+li {
+    list-style-type:none;
+}
+.right-container {
+    height: 100%;
+    position: absolute;
+}
+.message-container {
+    display: table;
+    height: 100%;
+}
+.message {
+    display: table-cell;
+    vertical-align: middle;
+}
