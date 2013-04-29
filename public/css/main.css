@@ -45,7 +45,6 @@ body {
 
 .navBar {
     padding-top: 10%;
-    padding-bottom: 35%;
 }    
 .element {
     margin-bottom:2.5%;
@@ -102,7 +101,6 @@ li {
         width: 100%;
         margin: 0 auto;
         padding-top: 0;
-        padding-bottom: 0;
         margin-left: -5%;
         text-align: center;
     }
