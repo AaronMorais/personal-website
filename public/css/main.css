@@ -9,9 +9,10 @@ body {
     margin-bottom: 10%;
     background-color: rgba(0, 0, 0,0.2);
     height: 400px;
+    width: 90%;
 }
 
-.grid {
+.grid, .message-container, .left-container, .right-container {
     height: 100%;
 }
 
@@ -34,12 +35,6 @@ body {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 800px) {
-    .name {
-        font-size:120%
-    }
-}
-
 #first-name {
     margin-left: -20%;
 }
@@ -59,6 +54,9 @@ body {
     margin-left: 10%;
     color: rgb(74,66,71);
 }
+.element:hover,a:hover {
+    color:gray;
+}
 a {
     text-decoration:none;
     color: rgb(74,66,71);
@@ -66,14 +64,55 @@ a {
 li {
     list-style-type:none;
 }
-.right-container {
-    height: 100%;
-}
+
 .message-container {
     display: table;
-    height: 100%;
 }
 .message {
     display: table-cell;
     vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+    .name {
+        font-size:120%
+    }
+}
+@media screen and (max-width: 650px) {
+    .container {
+        height: 80%;
+        margin-top: 15%;
+    }
+    .name-container {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .navBar {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: -5%;
+        text-align: center;
+    }
+    .element {
+        display: inline;
+    }
+    .left-container {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1); 
+    }
+    #first-name {
+        margin-left: -5%;
+    }
+    #last-name {
+        margin-left: 0%;
+    }
+    .message-container {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
 }
