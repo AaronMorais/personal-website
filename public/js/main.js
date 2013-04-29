@@ -1,6 +1,8 @@
 var loading = false;
 $(document).ready(function() {
-	if(window.location.pathname == '/') {
+	if(window.location.hash != "") {
+		updateOnHash();
+	} else if(window.location.pathname == '/') {
 		loadHome(false);
 	} else if(window.location.pathname == '/resume') {
 		loadResume(false);
@@ -14,13 +16,17 @@ $(document).ready(function() {
 	});
 
 	$(window).on('hashchange', function() {
-		if(document.location.hash == "#resume") {
-			loadResume(true);
-		} else if(document.location.hash == "") {
-			loadHome(true);
-		}
+		updateOnHash();
 	});
 });
+
+function updateOnHash() {
+	if(document.location.hash == "#resume") {
+		loadResume(true);
+	} else if(document.location.hash == "") {
+		loadHome(true);
+	}
+}
 
 function loadHome(change) {
 	updateContainer("message.html");
