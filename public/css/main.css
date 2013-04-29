@@ -89,7 +89,7 @@ li {
 @media screen and (max-width: 650px) {
     .container {
         height: 80%;
-        margin-top: 15%;
+        margin-top: 5%;
     }
     .name-container {
         padding-top: 5%;
@@ -106,10 +106,10 @@ li {
     }
     .element {
         display: inline;
+        font-size:75%;
     }
     .element:hover { 
-        top:-5px;
-        padding-left: 0;
+        padding: 0;
     }
     .left-container {
         width: 100%;
