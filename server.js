@@ -8,6 +8,14 @@ app.get('/', function(req,res){
 }); 
 
 app.get('/resume', function(req,res){
+ res.sendfile(__dirname + '/public/resume.pdf');
+}); 
+
+app.get('/projects', function(req,res){
+ res.sendfile(__dirname + '/public/index.html');
+}); 
+
+app.get('/contact', function(req,res){
  res.sendfile(__dirname + '/public/index.html');
 }); 
 

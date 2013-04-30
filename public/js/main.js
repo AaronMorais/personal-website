@@ -4,15 +4,20 @@ $(document).ready(function() {
 		updateOnHash();
 	} else if(window.location.pathname == '/') {
 		loadHome(false);
-	} else if(window.location.pathname == '/resume') {
-		loadResume(false);
+	} else if(window.location.pathname == '/contact') {
+		loadContact(false);
+	} else if(window.location.pathname == '/projects') {
+		loadProjects(false);
 	}
 
 	$("#home").click(function() {
 		loadHome(true);
 	});
-	$("#resume").click(function() {
-		loadResume(true);
+	$("#contact").click(function() {
+		loadContact(true);
+	});
+	$("#projects").click(function() {
+		loadProjects(true);
 	});
 
 	$(window).on('hashchange', function() {
@@ -21,24 +26,33 @@ $(document).ready(function() {
 });
 
 function updateOnHash() {
-	if(document.location.hash == "#resume") {
-		loadResume(true);
-	} else if(document.location.hash == "") {
+	if(document.location.hash == "#contact") {
+		loadContact(true);
+	} else if(document.location.hash == "#projects") {
+		loadProjects(true);
+	} else if(document.location.hash == "#home") {
 		loadHome(true);
-	}
+	} 
 }
 
 function loadHome(change) {
-	updateContainer("message.html");
+	updateContainer("home.html");
 	if(change) {
-		document.location.hash = "";
+		document.location.hash = "home";
 	}
 }
 
-function loadResume(change) {
-	updateContainer("resume.html");
+function loadContact(change) {
+	updateContainer("contact.html");
 	if(change) {
-		document.location.hash = "resume";
+		document.location.hash = "contact";
+	}
+}
+
+function loadProjects(change) {
+	updateContainer("projects.html");
+	if(change) {
+		document.location.hash = "projects";
 	}
 }
 
