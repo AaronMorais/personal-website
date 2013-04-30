@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:200,400);
+@import url(http://fonts.googleapis.com/css?family=Lato:200,400,800);
 body {
     background:url("/img/bright_squares.png") repeat;
     font-family: 'Lato', serif;
@@ -28,6 +28,7 @@ body {
 
 .name {
     font-size:1.6em;
+    font-weight: 800;
     line-height: 1.2em;
     letter-spacing: 4px;
     text-align: center;
@@ -77,9 +78,6 @@ li {
 .message {
     display: table-cell;
     vertical-align: middle;
-}
-.right-container {
-    overflow: scroll;
 }
 @media screen and (max-width: 800px) {
     .name {
