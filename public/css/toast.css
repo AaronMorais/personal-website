@@ -36,7 +36,7 @@
 
 .container {
 	/* Whatever you want. They’re your oats. */
-	max-width: 1070px;
+	/*max-width: 1070px;*/
 	margin: 0 auto;
 	padding: 0 30px;
 	padding: 0 1.5rem;
@@ -76,8 +76,8 @@
 .one-of-three { width: 30.36%; }
 .two-of-three { width: 63.666666666%; }
 
-.one-of-four { width: 25%; }
-.three-of-four { width: 69%; }
+.one-of-four { width: 27%; }
+.three-of-four { width: 61%; }
 
 .one-of-five { width: 17.07%; }
 .two-of-five { width: 37%; }
