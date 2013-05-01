@@ -55,6 +55,7 @@ body {
     padding-top: 10%;
 }    
 .element {
+    cursor:pointer;
     margin-bottom:2.5%;
     text-align:left;
     margin-left: 10%;
