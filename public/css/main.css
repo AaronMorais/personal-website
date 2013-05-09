@@ -88,17 +88,17 @@ li {
 .message {
     display: table-cell;
     vertical-align: middle;
-    font-size: 1em;
+    font-size: 1.4em;
 }
 .name {
-    font-size:1.7em;
+    font-size:2.0em;
 }
 .element {
     font-size:1em;
 }
 @media screen and (max-width: 800px) {
     .name {
-        font-size:1.7em;
+        font-size:2.0em;
     }
     .element {
         font-size: 1em;
@@ -148,5 +148,8 @@ li {
     .message-container {
         padding-top: 10%;
         padding-bottom: 10%;
+    }
+    .message {
+        font-size: 1.1em;
     }
 }
