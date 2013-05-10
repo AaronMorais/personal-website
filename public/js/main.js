@@ -43,17 +43,19 @@ function loadHome(change) {
 }
 
 function loadContact(change) {
-	updateContainer("contact.html");
+    loadHome(change);
+	/*updateContainer("contact.html");
 	if(change) {
 		document.location.hash = "contact";
-	}
+	}*/
 }
 
 function loadProjects(change) {
-	updateContainer("projects.html");
+    loadHome(change);
+	/*updateContainer("projects.html");
 	if(change) {
 		document.location.hash = "projects";
-	}
+	}*/
 }
 
 function updateContainer(path) {
