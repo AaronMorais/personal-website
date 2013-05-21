@@ -73,7 +73,7 @@ function updateContainer(path) {
 }
 
 $(window).resize(function() {
-	updateSocialPosition();
+	updateOnHash();
 });
 
 function updateSocialPosition() {
