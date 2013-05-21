@@ -82,6 +82,7 @@ li {
 .message-container {
     display: table;
     padding-left: 5%;
+    padding-right: 5%;
     width: 100%;
     height: 100%;
 }
@@ -96,6 +97,44 @@ li {
 .element {
     font-size:1em;
 }
+
+.social_icons {
+    position: fixed;
+    z-index: 2;
+    right: 10%;
+    top:10%;
+    opacity: 0;
+}
+
+.social_icon {
+    float: left;
+    margin: 5px;
+    width:42px;
+    height:42px;
+    background:url("/img/Social_Icons_Small.png");
+}
+
+.facebook {
+    background-position: -55px -10.5px;
+}
+.facebook:hover {
+    background-position: -55px -162.5px;
+}
+
+.linkedin {
+    background-position: -221px -66px;
+}
+.linkedin:hover {
+    background-position: -221px -218px;
+}
+
+.github {
+    background-position: -166px -10.5px;
+}
+.github:hover {
+    background-position: -166px -162.5px;
+}
+
 @media screen and (max-width: 800px) {
     .name {
         font-size:2.0em;
@@ -151,5 +190,8 @@ li {
     }
     .message {
         font-size: 1.1em;
+    }
+    .social_icons {
+        right: 5%;
     }
 }

@@ -4,17 +4,12 @@ $(document).ready(function() {
 		updateOnHash();
 	} else if(window.location.pathname == '/') {
 		loadHome(false);
-	} else if(window.location.pathname == '/contact') {
-		loadContact(false);
 	} else if(window.location.pathname == '/projects') {
 		loadProjects(false);
 	}
 
 	$("#home").click(function() {
 		loadHome(true);
-	});
-	$("#contact").click(function() {
-		loadContact(true);
 	});
 	$("#projects").click(function() {
 		loadProjects(true);
@@ -26,9 +21,7 @@ $(document).ready(function() {
 });
 
 function updateOnHash() {
-	if(document.location.hash == "#contact") {
-		loadContact(true);
-	} else if(document.location.hash == "#projects") {
+	if(document.location.hash == "#projects") {
 		loadProjects(true);
 	} else if(document.location.hash == "#home") {
 		loadHome(true);
@@ -42,27 +35,28 @@ function loadHome(change) {
 	}
 }
 
-function loadContact(change) {
-    loadHome(change);
-	/*updateContainer("contact.html");
-	if(change) {
-		document.location.hash = "contact";
-	}*/
-}
-
 function loadProjects(change) {
-    loadHome(change);
-	/*updateContainer("projects.html");
+	updateContainer("projects.html");
 	if(change) {
 		document.location.hash = "projects";
-	}*/
+	}
 }
+
+function showSocialIcons(visible) {
+	if(visible) {
+		updateSocialPosition();
+		$(".social_icons").animate({opacity:1}, 500);
+	} else {
+		$(".social_icons").animate({opacity:0}, 500);
+	}
+} 
 
 function updateContainer(path) {
 	if(loading) 
 		return;
 	loading = true;
 
+	showSocialIcons(false);
 	$(".right-container").animate({opacity:0}, 500, function() {
 		$.ajax({
 			url : path, 
@@ -70,11 +64,27 @@ function updateContainer(path) {
 				$(".right-container").showHtml(data, 500, function() {
 				  	loading = false;
 			  		$(".right-container").animate({opacity:1}, 500);
+			  		showSocialIcons(true);
 				});
 			}, 
 			async: false
 		});
 	});
+}
+
+$(window).resize(function() {
+	updateSocialPosition();
+});
+
+function updateSocialPosition() {
+	var width = $(window).width();
+	if (width < 650) {
+		var yValue = $(".left-container").height();
+		yValue += 20;
+		$(".social_icons").css({top:yValue});
+	} else {
+		$(".social_icons").css({top:"10%"});
+	}
 }
 
 (function($)
