@@ -67,7 +67,7 @@ body {
     padding-left: 5%;
 }
 
-.element:hover, a:hover, .name {
+.element:hover, .name {
     color:#95a5a6;
 }
 .element, a {
@@ -99,7 +99,7 @@ li {
 }
 
 .social_icons {
-    position: fixed;
+    position: absolute;
     z-index: 2;
     right: 10%;
     top:10%;
@@ -133,6 +133,30 @@ li {
 }
 .github:hover {
     background-position: -166px -162.5px;
+}
+
+.projects {
+    padding-top: 10px;
+}
+.project {
+    height: 70px;
+    margin-bottom: 20px;
+}
+.projectText {
+    width: 90%;
+    height: auto;
+}
+.projectSubtext {
+    position: relative;
+    font-size: 50%;
+}
+.projectImage {
+    background-color: blue;
+    height: 100px;
+    width: 30%;
+    right: 0;
+    float: right;
+    display: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -185,7 +209,7 @@ li {
         margin-left: 0%;
     }
     .message-container {
-        padding-top: 10%;
+        padding-top: 15%;
         padding-bottom: 10%;
     }
     .message {
@@ -193,5 +217,8 @@ li {
     }
     .social_icons {
         right: 5%;
+    }
+    .project {
+        height: 50px;
     }
 }

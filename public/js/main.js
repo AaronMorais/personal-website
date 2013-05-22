@@ -65,16 +65,13 @@ function updateContainer(path) {
 				  	loading = false;
 			  		$(".right-container").animate({opacity:1}, 500);
 			  		showSocialIcons(true);
+			  		updateBackground();
 				});
 			}, 
 			async: false
 		});
 	});
 }
-
-$(window).resize(function() {
-	updateOnHash();
-});
 
 function updateSocialPosition() {
 	var width = $(window).width();
@@ -86,6 +83,25 @@ function updateSocialPosition() {
 		$(".social_icons").css({top:"10%"});
 	}
 }
+
+function updateBackground() {
+	var width = $(window).width();
+	if (width < 650) {
+		$("html").css({height:$("window").height()});
+		$(".right-container").css({height:$("window").height()});
+		var height = $(".right-container").height();
+		height +=200;
+		if(height > $("html").height()) {
+			console.log(height);
+			console.log($("html").height());
+			$("html").css({height:height});
+		}
+	}
+}
+
+$(window).resize(function() {
+	updateSocialPosition();
+});
 
 (function($)
 {
