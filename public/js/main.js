@@ -4,7 +4,8 @@ $(document).ready(function() {
 		updateOnHash();
 	} else if(window.location.pathname == '/') {
 		loadHome(false);
-	} else if(window.location.pathname == '/projects') {
+	} else if(window.location.pathname == '/projects/'
+			|| window.location.pathname == '/projects') {
 		loadProjects(false);
 	}
 
@@ -29,14 +30,14 @@ function updateOnHash() {
 }
 
 function loadHome(change) {
-	updateContainer("home.html");
+	updateContainer("/home.html");
 	if(change) {
 		document.location.hash = "home";
 	}
 }
 
 function loadProjects(change) {
-	updateContainer("projects.html");
+	updateContainer("/projects.html");
 	if(change) {
 		document.location.hash = "projects";
 	}
