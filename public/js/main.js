@@ -46,9 +46,9 @@ function loadProjects(change) {
 function showSocialIcons(visible) {
 	if(visible) {
 		updateSocialPosition();
-		$(".social_icons").animate({opacity:1}, 500);
+		$(".social_icons").animate({opacity:1}, 250);
 	} else {
-		$(".social_icons").animate({opacity:0}, 500);
+		$(".social_icons").animate({opacity:0}, 250);
 	}
 } 
 
@@ -58,13 +58,13 @@ function updateContainer(path) {
 	loading = true;
 
 	showSocialIcons(false);
-	$(".right-container").animate({opacity:0}, 500, function() {
+	$(".right-container").animate({opacity:0}, 250, function() {
 		$.ajax({
 			url : path, 
 			success: function(data) {
-				$(".right-container").showHtml(data, 500, function() {
+				$(".right-container").showHtml(data, 250, function() {
 				  	loading = false;
-			  		$(".right-container").animate({opacity:1}, 500);
+			  		$(".right-container").animate({opacity:1}, 250);
 			  		showSocialIcons(true);
 			  		updateBackground();
 				});
