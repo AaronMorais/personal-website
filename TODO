@@ -1,2 +1,5 @@
 Fix floating bug when going from mobile to desktop resolution - Caused by the social media icons
 Update projects page with images
+Fix bug where background isn't long enough when shrinking screen to mobile
+IE Support
+Better Screen Resolution Support
