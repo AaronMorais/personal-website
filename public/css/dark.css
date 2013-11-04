@@ -1,0 +1,224 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:200,400,800);
+html, body, .container {
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    padding: 0;
+}
+
+body {
+    background:url("/img/bright_squares.png") repeat;
+    font-family: 'Lato', serif;
+}
+
+.grid{
+    margin-left: -5%;
+    width: 100%;
+    margin: 0;
+}
+
+.grid, .message-container, .left-container, .right-container{
+    height: 100%;
+}
+
+.left-container {
+    border-right: 1px solid rgba(0,0,0,0.1);
+    margin: 0;
+    padding-top: 2.5%;
+    padding-left: 3.5%;
+    background-color: rgba(0, 0, 0,0.8);
+}
+
+.name-container {
+    margin: 0 auto;
+    padding-top: 20%;
+    padding-bottom: 10%;
+}
+
+.name {
+    font-weight: 400;
+    line-height: 1.2em;
+    letter-spacing: 4px;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#first-name {
+    margin-left:10%;
+}
+
+#last-name {
+    margin-left: 15%;
+}
+
+.navBar {
+    padding-top: 10%;
+}    
+.element {
+    cursor:pointer;
+    margin-bottom:2.5%;
+    text-align:left;
+    margin-left: 10%;
+    -webkit-transition: margin 0.5s ease-out; 
+    -moz-transition: margin 0.5s ease-out; 
+    -o-transition: margin 0.5s ease-out;
+}
+.element:hover { 
+    padding-left: 5%;
+}
+
+.element:hover, .name {
+    color:#95a5a6;
+}
+.element, a {
+    color: #ecf0f1;
+}
+a {
+    text-decoration:none;
+}
+li {
+    list-style-type:none;
+}
+.message-container {
+    display: table;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    height: 100%;
+}
+.message {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.4em;
+}
+.name {
+    font-size:2.0em;
+}
+.element {
+    font-size:1em;
+}
+
+.social_icons {
+    position: absolute;
+    z-index: 2;
+    right: 10%;
+    top:10%;
+    opacity: 0;
+}
+
+.social_icon {
+    float: left;
+    margin: 5px;
+    width:42px;
+    height:42px;
+    background:url("/img/Social_Icons_Small.png");
+}
+
+.facebook {
+    background-position: -55px -10.5px;
+}
+.facebook:hover {
+    background-position: -55px -162.5px;
+}
+
+.linkedin {
+    background-position: -221px -66px;
+}
+.linkedin:hover {
+    background-position: -221px -218px;
+}
+
+.github {
+    background-position: -166px -10.5px;
+}
+.github:hover {
+    background-position: -166px -162.5px;
+}
+
+.projects {
+    padding-top: 10px;
+}
+.project {
+    height: 70px;
+    margin-bottom: 20px;
+}
+.projectText {
+    width: 90%;
+    height: auto;
+}
+.projectSubtext {
+    position: relative;
+    font-size: 50%;
+}
+.projectImage {
+    background-color: blue;
+    height: 100px;
+    width: 30%;
+    right: 0;
+    float: right;
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .name {
+        font-size:2.0em;
+    }
+    .element {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 650px) {
+    .container, .grid, .message-container, .left-container, .right-container{
+        height: auto;
+    }
+    .grid {
+        margin: 0;
+    }
+    .name-container {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .navBar {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 0;
+        margin-left: -5%;
+        text-align: center;
+    }
+    .element {
+        display: inline;
+        font-size:75%;
+    }
+    .element:hover { 
+        padding: 0;
+    }
+    .left-container {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1); 
+    }
+    .name {
+        text-align: center;
+    }
+    #first-name {
+        margin-left: -5%;
+    }
+    #last-name {
+        margin-left: 0%;
+    }
+    .message-container {
+        padding-top: 15%;
+        padding-bottom: 10%;
+    }
+    .message {
+        font-size: 1.1em;
+    }
+    .social_icons {
+        right: 5%;
+    }
+    .project {
+        height: 50px;
+    }
+}
