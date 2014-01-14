@@ -27,10 +27,20 @@ body {
     background-color: #7f8c8d;
 }
 
+.circular-image {
+    margin-top: 10%;
+    margin-left:10%;
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: url('/img/aaron.jpg') no-repeat center;
+}
+
 .name-container {
     margin: 0 auto;
-    padding-top: 20%;
-    padding-bottom: 10%;
+    padding-top: 5%;
 }
 
 .name {
@@ -158,7 +168,12 @@ li {
     display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 870px) {
+    .circular-image {
+        width: 100px;
+        height: 100px;
+        background: url('/img/aaron-small.jpg') no-repeat center;
+    }
     .name {
         font-size:2.0em;
     }
@@ -172,6 +187,9 @@ li {
     }
     .grid {
         margin: 0;
+    }
+    .circular-image {
+        margin: 0 auto;
     }
     .name-container {
         padding-top: 5%;
@@ -208,7 +226,7 @@ li {
         margin-left: 0%;
     }
     .message-container {
-        padding-top: 15%;
+        padding-top: 20%;
         padding-bottom: 10%;
     }
     .message {
